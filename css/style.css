@@ -1,0 +1,311 @@
+@charset "utf-8";
+
+/* ========================================
+    リセットcss
+========================================= */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-style:normal;
+	font-weight: normal;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html{overflow-y: scroll;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,q:before, q:after {content: ''; content: none;}
+input, textarea,{margin: 0; padding: 0;}
+ol, ul{list-style:none;}
+table{border-collapse: collapse; border-spacing:0;}
+caption, th{text-align: left;}
+a:focus {outline:none;}
+
+/* micro clearfix */
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+.cf:after {clear: both;}
+.cf {*zoom: 1;}
+
+.box-shadow {
+  box-shadow: 0 2px 7px rgb(83,78,61,0.3 );
+}
+
+a {
+  text-decoration: none;
+}
+/* ========================================
+    レイアウト用
+========================================= */
+body {
+  background: url(../images/bg.png);
+  border-top: 5px solid #345c39;
+  font-family: "メイリオ", Meiryo;
+  height: auto;
+}
+
+#wrapper {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.clearfix {
+  clear: both;
+}
+
+
+
+/* ========================================
+    ヘッダー
+========================================= */
+header {
+  width: 100%;
+  height: 89px;
+}
+
+header h1 {
+  font-size: 18px;
+  color: blue;
+  float: left;
+  margin-top: 30px;
+}
+
+header span {
+  font-size: 27px;
+  font-weight: bold;
+}
+
+.sns-menu {
+  padding-top: 50px;
+}
+
+/* メニューバーの装飾 */
+ul.sns-menu li {
+  width: 150px;
+  float: right;
+  list-style: none;
+  position: relative;
+}
+
+ul.sns-menu a {
+  /* background: skyblue; */
+  color: #555555;
+  line-height: 40px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+}
+
+ul.sns-menu a:hover {
+  background: #fdd;
+  color: #f00;
+}
+
+/* サブメニューの装飾 */
+ul.sns-menu ul {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: none;
+  position: absolute;
+}
+
+ul.sns-menu ul li {
+  width: 100%;
+  border-top: 1px solid pink;
+}
+
+ul.sns-menu ul li a {
+  line-height: 35px;
+  text-align: center;
+  font-weight: normal;
+}
+
+ul.sns-menu ul li a:hover {
+  background: #fdd;
+  color: #f00;
+  font-weight: bold;
+}
+
+
+/* ========================================
+    メインイメージ
+========================================= */
+#mainimage {
+  width: 100%;
+  height: 375px;
+  margin: 30px auto;
+  text-align: center;
+  margin-top: 115px;
+}
+
+
+/* ========================================
+    レフト
+========================================= */
+#left {
+  width: 400px;
+  height: 300px;
+  float: left;
+  margin: 50px 0;
+}
+
+#left h2 {
+  margin-bottom: 30px;
+  color: blue;
+  font-weight: bold;
+  font-size: 20px;
+  border-left: 5px solid #723229;
+  padding-left: 10px;  
+}
+
+
+
+/* ========================================
+    ライト
+========================================= */
+#right {
+  width: 400px;
+  height: 300px;
+  float: right;
+  margin: 50px 0;
+  
+}
+
+#right h2 {
+  color: blue;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 30px;
+  border-left: 5px solid #723229;
+  padding-left: 10px;
+}
+
+
+/* ========================================
+    作成者紹介
+========================================= */
+section {
+  margin: 50px 0;
+}
+
+#owner {
+  width: 500px;
+  margin: 0 auto;
+}
+
+section h2 {
+  color: blue;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  border-left: 5px solid #723229;
+  padding-left: 10px;
+}
+
+section p {
+  margin-top: 30px;
+  font-size: 18px;
+  line-height: 2em;
+}
+
+
+/* ========================================
+    フッター
+========================================= */
+footer {
+  width: 100%;
+  height: 60px;
+  background: gray;
+  text-align: center;
+  color: #fff;
+  line-height: 60px;
+}
+
+
+/* ========================================
+    back-to-go
+========================================= */
+
+.sf-back-to-top {
+  background-color: #50A1CB; /* button color */
+  color: white; /* text/arrow color */ 
+  display: none;
+  z-index: 999;
+  /* float in bottom right corner */
+  /* 20 pixels from edge */
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  /* size of button is 50 pixels*/
+  width: 50px;
+  height: 50px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; 
+  /* round button */
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+a.sf-back-to-top {
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.6;
+  padding-left: 2px;
+  padding-top: 14px;    
+}
+
+a.sf-back-to-top .arrow:before {
+  content: "\e02d";
+  font-family: 'squarespace-ui-font';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  content: "\e02d";
+  text-align: center;
+  display: block;
+  vertical-align: middle;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  cursor: pointer;
+  margin-left: -4px;
+}
+
+
+/* ========================================
+    レスポンシブ対応
+========================================= */
+
+@media(max-width: 768px){ {
+
+}}

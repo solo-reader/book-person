@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>人生がときめく読書の時間 | 読書で人生を豊かに</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/jquery.bxslider.css">
+  <script src="js/jquery.bxslider.js"></script>
+  
+  <script>
+    $(function(){
+      $('.bxslider').bxSlider({
+	     mode: "fade",
+	     speed: "1000",
+  });
+});
+
+    $(function() {
+      $("ul.sns-menu li").mouseenter(function() {
+        $(this).siblings().find("ul").hide();
+        $(this).children().slideDown(200);
+      });
+      $("html").click(function() {
+        $("ul.sns-menu ul").slideUp(200);
+      });
+    });
+  </script>
+
+<script>
+  var amountScrolled = 300;
+  
+  $(window).scroll(function() {
+      if ( $(window).scrollTop() > amountScrolled ) {
+          $('a.sf-back-to-top').fadeIn('slow');
+      } else {
+          $('a.sf-back-to-top').fadeOut('slow');
+      }
+  });
+  
+  $('a.sf-back-to-top').click(function() {
+      $('html, body').animate({
+          scrollTop: 0
+      }, 700);
+      return false;
+  });
+  </script>
+  
+</head>
+<body>
+  <a href="#" class="sf-back-to-top">Topへ</a>
+  <div id="wrapper">
+
+    <!-- headerここから -->
+    <header>
+      <h1>読書で人生を豊かに<br>
+        <span>人生がときめく読書の時間</span>
+      </h1>
+      <nav>
+        <ul class="sns-menu">
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">MENU</a>
+            <ul>
+              <li>
+                <a href="https://www.youtube.com/channel/UCh5OR_wXeVqjF8N1bdBpmbA" target="_blank">YouTube</a>
+              </li>
+              <li>
+                <a href="https://www.solo-reader.com/" target="_blank">Blog</a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/koukyuisiyakiimo/" target="_blank">Instagram</a>
+              </li>
+            </ul>            
+          </li>
+         
+          <li><a href="#">CONTACT</a></li>          
+        </ul>
+      </nav>
+      <div class="clieafix"></div>
+    </header>
+    <!-- headerここまで -->
+
+
+    <!-- mainimageここから -->
+    <div id="mainimage">
+      <ul class="bxslider">
+        <li><a href="#"><img src="images/hondana.png"></a></li>
+        <li><a href="#"><img src="images/toriming.png"></a></li>
+        <li><a href="#"><img src="images/jeans.png"></a></li>
+        <li><a href="#"><img src="images/megane.png"></a></li>
+        <li><a href="#"><img src="images/sutabacafe.png"></a></li>
+        <li><a href="#"><img src="images/seareader.png"></a></li>
+        <li><a href="#"><img src="images/library.png"></a></li>
+        <li><a href="#"><img src="images/bookflower.png"></a></li>
+      </ul>
+      
+    </div>
+    <!-- mainimageここまで -->
+
+
+    <!-- leftここから -->
+    <div id="left">
+      <h2>新着動画</h2>
+      <iframe width="480" height="270" src="https://www.youtube.com/embed/2ogJ_SAqZHI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <!-- leftここまで -->
+
+
+    <!-- rightここから -->
+    <div id="right">
+      <h2>新着記事</h2>
+      <iframe src="https://www.solo-reader.com/" width="480" height="270" allow="fullscreen"></iframe>
+    </div>
+    <!-- rightここまで -->
+    
+    <div class="clearfix"></div>
+
+    <section>
+      <ul>
+        <li id="owner">
+          <h2>作成者紹介</h2>
+          <img src="images/owner.png" width="480" height="300">
+          <p>本の魅力を伝えるきっかけになり、世の中に読書好きな人が増えるといいなと思って情報発信しています。<br>
+            私は大学入学と同時に本格的に読書を始めました。その後、約２５年以上、色々なジャンルの本を続けています。歴史小説、古典、小説など読んできた本は２４００冊以上です。<br>
+            私は一字一句読む派なので、読んできた冊数は多くないかもしれません。ですが、これまでの読書歴を活かして読んだ本をネタバレにならないように紹介することで、何かしら少しでも生きるヒントになるのではないかと思っています。<br>
+            インスタグラムでは、動画やブログの内容をコンパクトにまとめた「ミニブログ」スライドを配信しています。手短に本の内容を知りたい方はそちらをどうぞ。
+            </p>
+        </li>
+      </ul>
+    </section>
+
+  </div>  <!-- wrapperここまで -->
+
+  
+  <!-- footerここから -->
+  <footer>
+    <p>2019-2021 人生がときめく読書の時間</p>
+  </footer>
+  <!-- footerここまで -->
+  
+</body>
+</html>
